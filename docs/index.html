@@ -2,6 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta http-equiv="refresh" content="2; url=https://rowyem-design.github.io/rowyem-design/">
   <title>تحويلك إلى الموقع الجديد</title>
   <style>
@@ -15,12 +16,31 @@
       height: 100vh;
       text-align: center;
       color: #333;
+      margin: 0; /* مهم للجوال */
     }
     .card {
       background: white;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 90%; 
+      max-width: 400px; /* للتحكم في العرض على الكمبيوتر */
+      transition: all 0.3s ease-in-out; /* إضافة انتقال بسيط */
+    }
+    /* 👈 استعلام الوسائط: لتكبير النافذة (البطاقة) على الجوال */
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.5rem;
+        width: 95%;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      h2 {
+        font-size: 1.5rem; 
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
